@@ -1,0 +1,20 @@
+21:54:29 **** Incremental Build of configuration Debug for project Blinked_LED ****
+make -j12 all 
+arm-none-eabi-gcc "../Driver/src/001led taggle.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F401RCTx -c -I../Inc -I"D:/courses/Done/Embedded & Electronics/Mastering Microcontroller and Embedded Driver Development/Drivers/code_updates/1-blinking LED/Blinked_LED/Driver/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Driver/src/001led taggle.d" -MT"Driver/src/001led taggle.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Driver/src/001led taggle.o"
+arm-none-eabi-gcc -o "Blinked_LED.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\courses\Done\Embedded & Electronics\Mastering Microcontroller and Embedded Driver Development\Drivers\code_updates\1-blinking LED\Blinked_LED\STM32F401RCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Blinked_LED.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Blinked_LED.elf
+ 
+arm-none-eabi-size   Blinked_LED.elf 
+arm-none-eabi-objdump -h -S  Blinked_LED.elf  > "Blinked_LED.list"
+arm-none-eabi-objcopy  -O ihex  Blinked_LED.elf  "Blinked_LED.hex"
+   text	   data	    bss	    dec	    hex	filename
+   1928	      8	   1568	   3504	    db0	Blinked_LED.elf
+Finished building: default.size.stdout
+Finished building: Blinked_LED.list
+Finished building: Blinked_LED.hex
+ 
+ 
+ 
+
+21:54:30 Build Finished. 0 errors, 0 warnings. (took 1s.302ms)
+
