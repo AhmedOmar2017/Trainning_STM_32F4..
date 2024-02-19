@@ -1,4 +1,4 @@
-"./Driver/src/2-Led_button.o"
+"./Driver/src/3-button_interrupt.o"
 "./Driver/src/HAL.o"
 "./Driver/src/syscalls.o"
 "./Driver/src/sysmem.o"
